@@ -17,6 +17,7 @@ $clientes = $cliente->read();
 <!DOCTYPE html>
 <html>
 <head><title>Clientes</title></head>
+<link rel="stylesheet" href="../Css/estilos_construtores.css">
 <body>
     <h2>Gerenciar Clientes</h2>
     <form method="POST">

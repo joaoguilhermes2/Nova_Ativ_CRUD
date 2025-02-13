@@ -26,6 +26,7 @@ $vendas = $venda->read();
 <!DOCTYPE html>
 <html>
 <head><title>Vendas</title></head>
+<link rel="stylesheet" href="../Css/estilos_construtores.css">
 <body>
     <h2>Gerenciar Vendas</h2>
     <form method="POST">

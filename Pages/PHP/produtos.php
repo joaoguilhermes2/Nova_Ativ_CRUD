@@ -17,6 +17,7 @@ $produtos = $produto->read();
 <!DOCTYPE html>
 <html>
 <head><title>Produtos</title></head>
+<link rel="stylesheet" href="../Css/estilos_construtores.css">
 <body>
     <h2>Gerenciar Produtos</h2>
     <form method="POST">

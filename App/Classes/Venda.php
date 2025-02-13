@@ -9,7 +9,7 @@ class Venda {
     }
 
     public function create($cliente_id, $produto_id, $quantidade, $total) {
-        $sql = "INSERT INTO " . $this->table . " (cliente_id, produto_id, quantidade, total) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO " . $this->table . " (id_cliente, id_produto, quantidade, total) VALUES (?, ?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
         return $stmt->execute([$cliente_id, $produto_id, $quantidade, $total]);
     }
@@ -17,8 +17,8 @@ class Venda {
     public function read() {
         $sql = "SELECT v.id, c.nome AS cliente, p.nome AS produto, v.quantidade, v.total, v.data_venda 
                 FROM " . $this->table . " v
-                JOIN clientes c ON v.cliente_id = c.id
-                JOIN produtos p ON v.produto_id = p.id";
+                JOIN clientes c ON v.id_cliente = c.id
+                JOIN produtos p ON v.id_produto = p.id";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
